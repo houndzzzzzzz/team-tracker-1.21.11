@@ -1,0 +1,36 @@
+name: Build mod jars
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - folder: mc1.21.11
+            java: '21'
+          - folder: mc26.2
+            java: '25'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+
+      - name: Build ${{ matrix.folder }}
+        working-directory: ${{ matrix.folder }}
+        run: bash ./gradlew build --no-daemon
+
+      - name: Upload jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: remplify-team-tracker-${{ matrix.folder }}
+          path: |
+            ${{ matrix.folder }}/build/libs/*.jar
+            !${{ matrix.folder }}/build/libs/*-sources.jar
