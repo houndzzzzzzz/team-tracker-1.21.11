@@ -1,0 +1,10 @@
+{
+  "key.category.remplify_teamtracker.main": "Remplify Team Tracker",
+  "key.remplify_teamtracker.menu": "Open Menu",
+  "key.remplify_teamtracker.inventories": "Open Team Inventories",
+  "key.remplify_teamtracker.reveal": "Hold: Show All Text",
+  "key.remplify_teamtracker.toggle": "Toggle Tracker",
+  "key.remplify_teamtracker.cycle_symbol": "Next Symbol",
+  "key.remplify_teamtracker.cycle_colour": "Next Colour Mode",
+  "key.remplify_teamtracker.cycle_show": "Next Text Mode"
+}

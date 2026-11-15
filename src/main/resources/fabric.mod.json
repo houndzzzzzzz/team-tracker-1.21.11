@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "remplify_teamtracker",
+  "version": "${version}",
+  "name": "Remplify Team Tracker",
+  "description": "Shows your teammates on screen and lets teammates who opt in view each other's inventories. Works on any server via your own relay. Compatible between 1.21.11 and 26.2.",
+  "authors": [
+    "Remplify"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.remplify.teamtracker.mc.TeamTrackerClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
